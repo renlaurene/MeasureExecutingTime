@@ -1,0 +1,34 @@
+Using time
+
+import time
+start = time.time()
+"the code you want to test stays here"
+end = time.time()
+print(end - start)
+    
+Using for loop
+
+import time
+start = time.time()
+a = range(100000)
+b = []
+for i in a:
+    b.append(i*2)
+end = time.time()
+// That would output 0.02017498016357422 seconds on 
+// my computer. So, the script took around 2/100 of 
+// a second to execute.
+print(end - start)
+    
+Using a list comprehension
+
+import time
+start = time.time()
+a = range(100000)
+b = [i*2 for i in a]
+end = time.time()
+
+// That would output 0.009402990341186523 which means 
+// two times faster than the for loop. Quite a difference!
+print(end - start)
+    
