@@ -1,0 +1,43 @@
+POSIX function clock()
+int main() {
+    clock_t start;
+    clock_t end;
+    double cpu_time_used;
+
+    start = clock();
+    # do some computations
+    end = clock();
+
+    cpu_time_used = ((double) (end-start)) / CLOCKS_PER_SEC;
+}
+    
+POSIX function clock_gettime() precision is order of nanoseconds
+int main() {    
+    timespec start;
+    timespec end;
+
+    double cpu_time_used;
+
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &start);
+    # do some computations
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &end);
+
+    cpu_time_used = (end.tv_sec - start.tv_sec) 
+           + (end.tv_nsec - start.tv_nsec) / 1000000000.0;
+}
+    
+time_t
+time_t start,end;
+double dif;
+time (&start);
+// Do some calculation.
+time (&end);
+dif = difftime (end,start);
+    
+Time of Day ==> not precise
+gettimeofday(&tv1, NULL);
+/* Algorithm Implementation Code*/
+gettimeofday(&tv2, NULL);
+
+Total_Runtime=(tv2.tv_usec - tv1.tv_usec) +          
+              (tv2.tv_sec - tv1.tv_sec)*1000000);
