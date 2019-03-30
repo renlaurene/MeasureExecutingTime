@@ -1,11 +1,9 @@
 # MeasureExecutingTime
 byUsingJavaMethod to measure executing time
-To calculate the time need by (stopTime-startTime)
+The general idea is to calculate the executing time by (stopTime-startTime)
+Souce code is using Java as the following, also exmple code by using python and c are given as reference 
 
 
-// $javac TimeTest.java
-// $java -Xmx128M -Xms16M TimeTest
-// 9746465
 public class TimeTest {
    static void test(int n) {
       long total = 0;
