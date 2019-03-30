@@ -1,5 +1,8 @@
 # MeasureExecutingTime
 byUsingJavaMethod to measure executing time
+To calculate the time need by (stopTime-startTime)
+
+
 // $javac TimeTest.java
 // $java -Xmx128M -Xms16M TimeTest
 // 9746465
