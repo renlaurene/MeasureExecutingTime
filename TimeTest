@@ -1,6 +1,4 @@
-// $javac TimeTest.java
-// $java -Xmx128M -Xms16M TimeTest
-// 9746465
+
 public class TimeTest {
    static void test(int n) {
       long total = 0;
